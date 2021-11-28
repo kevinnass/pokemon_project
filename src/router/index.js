@@ -5,15 +5,22 @@ Author: Khaliq ALI
  */
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import pathResolver from '@/plugins/loader'
+// import pathResolver from '@/plugins/loader'
+import PokemonList from '../components/PokemonList'
+import PokemonView from '../components/PokemonView'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'About',
-    component: pathResolver('about', 'index')
+    name: 'PokemonList',
+    component: PokemonList
+  },
+  {
+    path: '/view/:id',
+    name: 'PokemonView',
+    component: PokemonView
   }
 ]
 

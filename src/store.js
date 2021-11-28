@@ -1,19 +1,25 @@
-/*
-App
-Created at 09/04/2021 11:44
-Author: Khaliq ALI
- */
 import Vue from 'vue'
 import Vuex from 'vuex'
-// import apiRoutes from './router/api-routes'
-// import http from './plugins/http'
-import createPersistedState from 'vuex-persistedstate'
+// import createPersistedState from 'vuex-persistedstate'
+import pokemons from './components/data'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  plugins: [createPersistedState()],
-  state: {},
+  // plugins: [createPersistedState()],
+  state: {
+    pokemons,
+    search: ''
+  },
   mutations: {},
   actions: {},
-  getters: {}
+  getters: {
+    pokemons (state) {
+      return state.pokemons
+    },
+    filters (state) {
+      return state.pokemons.filter(pkmn => {
+        return pkmn.name.toLowerCase().includes(state.search.toLowerCase())
+      })
+    }
+  }
 })
