@@ -1,8 +1,3 @@
-<!--
-App
-Created at 09/04/2021 11:44
-Author: Khaliq ALI
-!-->
 <template>
     <div id="app" class="flex flex-col items-center">
       <router-link to="/">
