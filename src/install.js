@@ -1,8 +1,3 @@
-/*
-App
-Created at 09/04/2021 11:44
-Author: Khaliq ALI
- */
 import './assets/style/css/tailwind.css'
 import './assets/style/css/style.css'
 import './assets/style/sass/main.scss'
